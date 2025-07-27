@@ -1,0 +1,15 @@
+version: 1
+applications:
+  -
+    appRoot: /
+    frontend:
+      phases:
+        preBuild:
+          commands: ['npm i']
+        build:
+          commands: ['ng build']
+      artifacts:
+        baseDirectory: dist/AI.Home.Solutions/browser
+        files:
+          - '**/*'
+      buildPath: /
