@@ -1,15 +1,18 @@
 version: 1
 applications:
-  -
-    appRoot: /
+  - appRoot: /
     frontend:
       phases:
         preBuild:
-          commands: ['npm i']
+          commands:
+            - npm ci
         build:
-          commands: ['ng build']
+          commands:
+            - npm run build
       artifacts:
         baseDirectory: dist/AI.Home.Solutions/browser
         files:
           - '**/*'
-      buildPath: /
+      cache:
+        paths:
+          - node_modules/**/*
