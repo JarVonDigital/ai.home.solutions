@@ -28,7 +28,8 @@
             ],
             "styles": [
               "src/styles.scss",
-              "@shoelace-style/shoelace/dist/themes/light.css"
+              "@shoelace-style/shoelace/dist/themes/light.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.min.css"
             ]
           },
           "configurations": {

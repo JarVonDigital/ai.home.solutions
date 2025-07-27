@@ -1,9 +1,10 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {ReactiveFormsModule} from '@angular/forms';
+import {Contact} from './components/contact/contact';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [ReactiveFormsModule, Contact],
   templateUrl: './app.html',
   styleUrl: './app.scss',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -50,6 +50,8 @@
 
     .content {
       display: flex;
+      align-items: center;
+      justify-content: center;
       top: 0;
       position: absolute;
       height: inherit;
@@ -62,7 +64,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        max-width: 60%;
+        max-width: 70%;
 
         img {
           display: block;
@@ -127,7 +129,7 @@
   }
 
   .main-section {
-    margin: 5rem;
+    margin: 1rem;
 
     sl-details {
 
@@ -258,7 +260,6 @@
     align-items: center;
     justify-content:  center;
     min-height: 6rem;
-    margin: 2rem;
     border-top: .1rem solid rgb(240, 240, 240);
   }
 }

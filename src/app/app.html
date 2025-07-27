@@ -7,12 +7,12 @@
 
   <div class="links">
     <sl-button-group>
-      <sl-button>Services</sl-button>
-      <sl-button>About</sl-button>
-      <sl-button>Contact</sl-button>
+<!--      <sl-button>Services</sl-button>-->
+<!--      <sl-button>About</sl-button>-->
+<!--      <sl-button>Contact</sl-button>-->
     </sl-button-group>
     <sl-button-group>
-      <sl-button>
+      <sl-button href="tel:+18632741714">
         (863) 274-1714
         <sl-icon slot="prefix" name="telephone-fill"></sl-icon>
       </sl-button>
@@ -26,66 +26,6 @@
   <div class="content">
     <div class="logo">
       <img src="https://www.aihomesolutions.pro/grayscale-logo.png" alt="">
-    </div>
-
-    <div class="reviews">
-      <sl-carousel class="scroll-hint" navigation pagination autoplay autoplay-interval="2000" style="--aspect-ratio: 1/1">
-        <sl-carousel-item>
-          <sl-card>
-            <div class="header" slot="header">
-              <sl-avatar label="User avatar"></sl-avatar>
-            </div>
-
-            <div class="card-content">
-              <strong>Tim S.</strong><br />
-              Mr. Gibson gave us an amazing price that matched the service!<br />
-              <small>Apr 6th, 2025</small>
-            </div>
-
-            <div class="footer" slot="footer">
-              <sl-button variant="primary" pill>Read Review</sl-button>
-              <sl-rating></sl-rating>
-            </div>
-          </sl-card>
-        </sl-carousel-item>
-        <sl-carousel-item>
-          <sl-card>
-            <div class="header" slot="header">
-              <sl-avatar label="User avatar"></sl-avatar>
-            </div>
-
-            <div class="card-content">
-              <strong>Tim S.</strong><br />
-              Mr. Gibson gave us an amazing price that matched the service!<br />
-              <small>Apr 6th, 2025</small>
-            </div>
-
-            <div class="footer" slot="footer">
-              <sl-button variant="primary" pill>Read Review</sl-button>
-              <sl-rating></sl-rating>
-            </div>
-          </sl-card>
-        </sl-carousel-item>
-        <sl-carousel-item>
-          <sl-card>
-            <div class="header" slot="header">
-              <sl-avatar label="User avatar"></sl-avatar>
-            </div>
-
-            <div class="card-content">
-              <strong>Tim S.</strong><br />
-              Mr. Gibson gave us an amazing price that matched the service!<br />
-              <small>Apr 6th, 2025</small>
-            </div>
-
-            <div class="footer" slot="footer">
-              <sl-button variant="primary" pill>Read Review</sl-button>
-              <sl-rating></sl-rating>
-            </div>
-          </sl-card>
-        </sl-carousel-item>
-      </sl-carousel>
-
     </div>
   </div>
 
@@ -117,9 +57,9 @@
         When upgrading or installing a new HVAC system, AI Home Solutions partners with Rheem, a renowned leader in durable, high-performance comfort equipment. We feature Rheem’s efficient RBHP series air handlers, which can boost your system’s SEER rating up to 16 and include quiet ECM motors and insulated steel cabinets to reduce noise and improve thermal performance. These units are designed for enhanced humidity control, ensuring balanced indoor comfort and reduced energy bills. Their versatile, 4-way convertible configurations and easy-access washable filters mean a clean, tailored installation that suits your home’s layout.
         <br><br>
         We also integrate Rheem’s cutting-edge smart features, such as EcoNet® compatibility, allowing homeowners to remotely monitor and control heating, cooling, and connected water systems through a single app. Whether you opt for central air, heat pumps, or ductless mini‑splits, our expert team will pair your new system with a Rheem air handler that’s precisely sized and optimized for peak performance. With Rheem, every installation from AI Home Solutions delivers reliable, energy-saving comfort and seamless smart-home integration.
-        <div class="video">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/h7bIhZpS8kg?si=G44DpoH9VO8VGz8R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </div>
+<!--        <div class="video">-->
+<!--          <iframe width="560" height="315" src="https://www.youtube.com/embed/h7bIhZpS8kg?si=G44DpoH9VO8VGz8R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
+<!--        </div>-->
       </sl-tab-panel>
       <sl-tab-panel name="repair">
         Unexpected HVAC issues can disrupt your comfort and daily routine. Whether your unit isn’t blowing cold air, making unusual noises, or failing to start altogether, our expert technicians provide fast, reliable repair services. We work with all major brands and models, using advanced diagnostic tools to pinpoint the issue and restore functionality quickly. With AI Home Solutions, you’ll never be left sweating in the summer or shivering in the winter.
@@ -156,39 +96,8 @@
   </div>
 </section>
 
-<section class="contact-form">
-  <div class="contact-details">
-    <sl-button>
-      (863) 274-1714
-      <sl-icon slot="prefix" name="telephone-fill"></sl-icon>
-    </sl-button>
-    <sl-button>
-      ai.homesolutionspro&#64;gmail.com
-      <sl-icon slot="prefix" name="envelope-fill"></sl-icon>
-    </sl-button>
-  </div>
-  <form>
-    <div class="sbs">
-      <sl-input type="text" placeholder="First Name">
-        <sl-icon name="person-fill" slot="prefix"></sl-icon>
-      </sl-input>
-      <sl-input type="text" placeholder="Last Name">
-        <sl-icon name="person-fill" slot="prefix"></sl-icon>
-      </sl-input>
-    </div>
-
-    <sl-input type="email" placeholder="email">
-      <sl-icon name="envelope-fill" slot="prefix"></sl-icon>
-    </sl-input>
-
-    <sl-textarea placeholder="How can we help?"></sl-textarea>
-
-    <sl-button variant="success">
-      Send
-      <sl-icon name="send" slot="prefix"></sl-icon>
-    </sl-button>
-
-  </form>
+<section>
+  <app-contact></app-contact>
 </section>
 
 <footer>
