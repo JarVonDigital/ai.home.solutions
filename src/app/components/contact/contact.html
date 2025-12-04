@@ -31,7 +31,12 @@
       </div>
 
       <div class="form-group">
-        <div class="g-recaptcha" [attr.data-sitekey]="siteKey" data-callback="onCaptchaCallback"></div>
+        <div
+          class="g-recaptcha"
+          [attr.data-sitekey]="siteKey"
+          data-callback="onCaptchaCallback"
+          data-expired-callback="onCaptchaExpiredCallback"
+        ></div>
       </div>
 
       <button type="submit" [disabled]="form.invalid || !captchaToken">Send Message</button>
