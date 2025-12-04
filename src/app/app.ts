@@ -1,13 +1,13 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {ReactiveFormsModule} from '@angular/forms';
-import {Contact} from './components/contact/contact';
+import { Component } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Nav } from './components/nav/nav';
 
 @Component({
   selector: 'app-root',
-  imports: [ReactiveFormsModule, Contact],
+  standalone: true,
+  imports: [RouterOutlet, Nav],
   templateUrl: './app.html',
-  styleUrl: './app.scss',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  styleUrl: './app.scss'
 })
 export class App {
   protected title = 'AI.Home.Solutions';

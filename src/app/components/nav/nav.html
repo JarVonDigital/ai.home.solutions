@@ -1,0 +1,62 @@
+<nav class="site-nav" [class.menu-open]="menuOpen">
+  <div class="site-nav__inner">
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="Toggle navigation menu"
+      aria-controls="primary-navigation"
+      [attr.aria-expanded]="menuOpen"
+      (click)="toggleMenu()"
+    >
+      <span class="menu-toggle__bars" aria-hidden="true">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <a class="brand" routerLink="/" aria-label="AI Home Solutions home" (click)="closeMenu()">
+      <img src="logo/AIHS-Icon-Only.svg" alt="AI Home Solutions logo">
+      <div class="brand__text">
+        <span class="brand__name">AI Home Solutions</span>
+        <span class="brand__tagline">Heating &amp; Cooling</span>
+      </div>
+    </a>
+
+    <div class="site-nav__links" id="primary-navigation" [class.is-open]="menuOpen">
+      <a
+        class="nav-link"
+        routerLink="/"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+        (click)="closeMenu()"
+      >
+        Home
+      </a>
+      <a
+        class="nav-link"
+        routerLink="/contact"
+        routerLinkActive="active"
+        (click)="closeMenu()"
+      >
+        Contact
+      </a>
+    </div>
+
+    <a class="call-cta" href="tel:+18632741714" aria-label="Call (863) 274-1714">
+      <svg
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+        focusable="false"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.73 19.73 0 0 1-8.59-3.07 19.5 19.5 0 0 1-6-6A19.73 19.73 0 0 1 2.16 4.2 2 2 0 0 1 4.14 2h3a2 2 0 0 1 2 1.72c.12.86.37 1.69.73 2.47a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.78.36 1.61.61 2.47.73A2 2 0 0 1 22 16.92Z" />
+      </svg>
+      <span class="visually-hidden">Call (863) 274-1714</span>
+    </a>
+  </div>
+</nav>

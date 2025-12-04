@@ -4,6 +4,7 @@ import {FormBuilder, FormGroup, ReactiveFormsModule, Validators} from '@angular/
 
 @Component({
   selector: 'app-contact',
+  standalone: true,
   imports: [
     ReactiveFormsModule
   ],

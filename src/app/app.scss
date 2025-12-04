@@ -1,265 +1,91 @@
 :host {
   display: block;
+  --nav-height: 4rem;
+  --footer-height: 14rem;
+  --accent: var(--color-muted-teal);
+  --canvas: var(--color-platinum);
+  --ink: var(--color-carbon-black);
+  --muted: var(--color-grey-olive);
+}
 
-  // Move into its own file
-  nav {
-    top: 0;
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--canvas);
+}
+
+main > * {
+  flex: 1;
+  display: block;
+}
+
+
+footer {
+  background: linear-gradient(180deg, var(--canvas), #fff);
+  color: var(--ink);
+  padding: 2.5rem clamp(1.5rem, 5vw, 3rem) 1.5rem;
+  border-top: 1px solid rgba(35, 35, 35, 0.08);
+
+  .footer-inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem 2rem;
+  }
+
+  .footer-col {
+    h4 {
+      margin: 0 0 0.75rem;
+      font-size: 1.05rem;
+      letter-spacing: 0.01em;
+      color: var(--ink);
+    }
+
+    p {
+      margin: 0 0 0.75rem;
+      line-height: 1.4;
+      color: var(--muted);
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      li {
+        margin-bottom: 0.35rem;
+        line-height: 1.4;
+        color: var(--muted);
+      }
+    }
+  }
+
+  .footer-link {
+    display: block;
+    color: var(--ink);
+    text-decoration: none;
+    margin: 0.25rem 0;
+    font-weight: 600;
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  .privacy {
+    max-width: 28rem;
+  }
+
+  .footer-meta {
     display: flex;
-    position: fixed;
-    width: 100%;
-    height: 4rem;
-    background: rgb(255,255,255,.8);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 .5rem -.3rem;
-    z-index: 99999999999999999999;
-
-    .icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: inherit;
-      width: 8rem;
-      overflow: hidden;
-
-      img {
-        display: block;
-        height: inherit;
-        width: inherit;
-        object-fit: contain;
-        transform: scale(.8);
-      }
-    }
-
-    .links {
-      flex: 1;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin: 0 2rem;
-
-      sl-button {}
-    }
-  }
-
-  .cover-image {
-    display:  flex;
-    position: relative;
-    height: 100vh;
-    width: 100%;
-    overflow:  hidden;
-
-    .content {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      top: 0;
-      position: absolute;
-      height: inherit;
-      width: inherit;
-      z-index: 1;
-      background: rgba(255,255,255,.6);
-
-      .logo {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-width: 70%;
-
-        img {
-          display: block;
-          width: 80%;
-        }
-      }
-
-      .reviews {
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        max-height: 80vh;
-        margin-top: 4rem;
-
-        .card-content {
-          min-height: 5rem;
-
-          strong {
-            font-size: 1rem;
-          }
-
-          small {
-            font-weight: 600;
-            color: rgb(90, 90, 90);
-            line-height: 2rem;
-          }
-        }
-
-        .footer {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-
-        sl-card {
-          min-width: 20rem;
-
-          &::part(base) {
-            border-radius: 2rem;
-          }
-        }
-      }
-    }
-
-
-
-    .image {
-      top: 0;
-      position: absolute;
-      height: inherit;
-      width: inherit;
-      z-index: 0;
-
-      img {
-        display: block;
-        height: inherit;
-        width: inherit;
-        object-fit: cover;
-      }
-    }
-  }
-
-  .main-section {
-    margin: 1rem;
-
-    sl-details {
-
-      sl-divider {
-        margin: 3rem 0;
-      }
-
-      sl-tab-group {
-        color: black;
-        margin-top: 4rem;
-
-        sl-tab-panel {
-
-          .video {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 4rem 4rem 0;
-          }
-          &::part(base) {
-            margin: 2rem 2rem 0;
-          }
-        }
-      }
-
-      &::part(base) {
-        border-radius: 1rem;
-        padding: 2rem;
-      }
-      &::part(header) {
-        font-size: 1.5rem;
-      }
-    }
-  }
-
-  .serving {
-    display: flex;
-    background: rgb(245,245,245,.8);
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    background: url('https://images.pexels.com/photos/1486785/pexels-photo-1486785.jpeg?cs=srgb&dl=pexels-davidmcbee-1486785.jpg&fm=jpg');
-    background-size: cover;
-    background-repeat:  no-repeat ;
+    border-top: 1px solid rgba(35, 35, 35, 0.08);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
 
-    .inner {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      min-height: 18rem;
-      background: rgb(235,235,235,.8);
-      backdrop-filter: blur(.2rem);
-      padding: 5rem 0;
-
-      h2 {
-        text-align: center;
-        margin: 3rem 3rem 0;
-        font-size: 1.6rem;
-      }
-
-      .locations {
-        flex: 1;
-        display: flex;
-        margin: 0 20%;
-
-        .l-stack {
-          flex: 1;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-
-          li {
-            list-style:  none;
-            font-weight: 600;
-            font-size: 1.3rem;
-            line-height: 2.5rem;
-          }
-
-        }
-      }
+    small {
+      color: var(--muted);
     }
-  }
-
-  .contact-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 5rem;
-
-    .contact-details {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      max-width: 40%;
-
-      sl-button {
-        margin-bottom: 1rem;
-        &::part(base) {
-          justify-content: flex-start;
-          border: none;
-          border-bottom: .08rem solid #ccc;
-          border-radius: 0;
-        }
-      }
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      flex: 1;
-      max-width: 800px;
-      padding: 2rem;
-
-      sl-input, sl-textarea, sl-button {
-        flex: 1;
-        margin: .5rem;
-      }
-
-      .sbs { // Side By Side
-        display: flex;
-      }
-    }
-  }
-
-  footer {
-    display: flex;
-    align-items: center;
-    justify-content:  center;
-    min-height: 6rem;
-    border-top: .1rem solid rgb(240, 240, 240);
   }
 }

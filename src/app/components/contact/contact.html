@@ -4,9 +4,12 @@
     <p><i class="fas fa-phone"></i> <a href="tel:+18632741714">(863) 274-1714</a></p>
     <p><i class="fas fa-envelope"></i> <a href="mailto:ai.homesolutionspro@gmail.com">ai.homesolutionspro&#64;gmail.com</a></p>
   </div>
-
   <div class="right">
     <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <div class="form-logo">
+        <img src="grayscale-logo.png" alt="AI Home Solutions logo">
+      </div>
+
       <div class="form-group">
         <label for="firstName">First Name</label>
         <input id="firstName" type="text" formControlName="firstName" />

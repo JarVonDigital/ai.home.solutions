@@ -1,105 +1,40 @@
+<app-nav></app-nav>
 
-<!-- Navigation -->
-<nav>
-  <div class="icon">
-    <img src="grayscale-logo.png" alt="">
-  </div>
-
-  <div class="links">
-    <sl-button-group>
-<!--      <sl-button>Services</sl-button>-->
-<!--      <sl-button>About</sl-button>-->
-<!--      <sl-button>Contact</sl-button>-->
-    </sl-button-group>
-    <sl-button-group>
-      <sl-button href="tel:+18632741714">
-        (863) 274-1714
-        <sl-icon slot="prefix" name="telephone-fill"></sl-icon>
-      </sl-button>
-    </sl-button-group>
-  </div>
-</nav>
-
-<!-- Cover Image Section -->
-<section class="cover-image">
-
-  <div class="content">
-    <div class="logo">
-      <img src="grayscale-logo.png" alt="">
-    </div>
-  </div>
-
-  <div class="image">
-    <img src="heat-pump.jpeg" alt="">
-  </div>
-
-</section>
-
-<!-- Main Content Section -->
-<section class="main-section">
-  <sl-details [open]="true" summary="Your Comfort, Our Priority — Smart HVAC Solutions for Every Home">
-    At AI Home Solutions, we specialize in delivering advanced heating, ventilation, and air conditioning (HVAC) services designed to keep your home comfortable year-round. Whether you need installation, maintenance, or emergency repair, our expert technicians use cutting-edge tools and smart technology to ensure efficient, reliable climate control tailored to your space.
-    From energy-saving upgrades to smart thermostat integration, we bring the future of home comfort to your doorstep — with service that’s fast, friendly, and focused on you.
-    <br><br>
-    At AI Home Solutions, we provide a full range of residential and light commercial HVAC services to keep your environment comfortable, efficient, and worry-free:
-
-    <sl-tab-group>
-
-      <!-- Navigation -->
-      <sl-tab slot="nav" panel="install">Installation</sl-tab>
-      <sl-tab slot="nav" panel="repair">Repair</sl-tab>
-      <sl-tab slot="nav" panel="maintain">Maintenance</sl-tab>
-      <sl-tab slot="nav" panel="air-quality">Air Quality</sl-tab>
-      <sl-tab slot="nav" panel="duct">Duct Services</sl-tab>
-
-      <!-- Panels -->
-      <sl-tab-panel name="install">
-        When upgrading or installing a new HVAC system, AI Home Solutions partners with Rheem, a renowned leader in durable, high-performance comfort equipment. We feature Rheem’s efficient RBHP series air handlers, which can boost your system’s SEER rating up to 16 and include quiet ECM motors and insulated steel cabinets to reduce noise and improve thermal performance. These units are designed for enhanced humidity control, ensuring balanced indoor comfort and reduced energy bills. Their versatile, 4-way convertible configurations and easy-access washable filters mean a clean, tailored installation that suits your home’s layout.
-        <br><br>
-        We also integrate Rheem’s cutting-edge smart features, such as EcoNet® compatibility, allowing homeowners to remotely monitor and control heating, cooling, and connected water systems through a single app. Whether you opt for central air, heat pumps, or ductless mini‑splits, our expert team will pair your new system with a Rheem air handler that’s precisely sized and optimized for peak performance. With Rheem, every installation from AI Home Solutions delivers reliable, energy-saving comfort and seamless smart-home integration.
-<!--        <div class="video">-->
-<!--          <iframe width="560" height="315" src="https://www.youtube.com/embed/h7bIhZpS8kg?si=G44DpoH9VO8VGz8R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>-->
-<!--        </div>-->
-      </sl-tab-panel>
-      <sl-tab-panel name="repair">
-        Unexpected HVAC issues can disrupt your comfort and daily routine. Whether your unit isn’t blowing cold air, making unusual noises, or failing to start altogether, our expert technicians provide fast, reliable repair services. We work with all major brands and models, using advanced diagnostic tools to pinpoint the issue and restore functionality quickly. With AI Home Solutions, you’ll never be left sweating in the summer or shivering in the winter.
-      </sl-tab-panel>
-      <sl-tab-panel name="maintain">
-        Regular maintenance is key to maximizing the life and efficiency of your heating and cooling systems. Our seasonal HVAC tune-ups include filter replacement, coil cleaning, refrigerant level checks, and a full performance inspection. These proactive visits help prevent breakdowns, reduce energy bills, and keep your system running like new. With a maintenance plan from AI Home Solutions, peace of mind comes standard.
-      </sl-tab-panel>
-      <sl-tab-panel name="air-quality">
-        Clean, healthy air is just as important as temperature control. That’s why we offer advanced indoor air quality solutions, including whole-home air purifiers, UV light systems, humidifiers, and dehumidifiers. We assess your home’s ventilation and air circulation to create a personalized plan that helps eliminate allergens, mold spores, dust, and bacteria—giving your family a cleaner, more breathable living environment.
-      </sl-tab-panel>
-      <sl-tab-panel name="duct">
-        Efficient heating and cooling starts with well-designed ductwork. Whether you're dealing with hot and cold spots, poor airflow, or high energy bills, our duct specialists can help. We provide duct repair, sealing, cleaning, and even custom duct design for optimal system performance. With properly maintained ducts, your HVAC system will deliver consistent comfort to every corner of your home.
-      </sl-tab-panel>
-
-    </sl-tab-group>
-  </sl-details>
-</section>
-
-<section class="serving">
-  <div class="inner">
-    <h2>Serving Lakeland and Surrounding Areas</h2>
-    <div class="locations">
-      <div class="l-stack">
-        <li>Plant City</li>
-        <li>Brandon</li>
-        <li>Winter Haven</li>
-      </div>
-      <div class="l-stack">
-        <li>Tampa</li>
-        <li>St Petersburg</li>
-        <li>Brandon</li>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <app-contact></app-contact>
-</section>
+<main>
+  <router-outlet></router-outlet>
+</main>
 
 <footer>
-  <b>&copy; 2025 AI Home Solutions & JarVonDigital LLC</b>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>AI Home Solutions</h4>
+      <p>Smart HVAC installs, repairs, and maintenance for Lakeland and the surrounding areas.</p>
+      <a class="footer-link" href="tel:+18632741714">(863) 274-1714</a>
+      <a class="footer-link" href="mailto:ai.homesolutionspro@gmail.com">ai.homesolutionspro@gmail.com</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Site Map</h4>
+      <a class="footer-link" routerLink="/">Home</a>
+      <a class="footer-link" routerLink="/contact">Contact</a>
+      <a class="footer-link" href="tel:+18632741714">Schedule a Call</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Hours of Operation</h4>
+      <ul>
+        <li>Mon – Sat: 8:00 AM – 6:00 PM</li>
+        <li>Sun: Emergency service by appointment</li>
+        <li>After-hours: Urgent HVAC support when available</li>
+      </ul>
+    </div>
+
+    <div class="footer-col privacy">
+      <h4>Privacy Policy</h4>
+      <p>We collect your contact and service details only to schedule HVAC visits, maintain equipment records, and send confirmations. We do not sell personal data. Limited information may be shared with trusted providers (e.g., EmailJS) solely to send your messages. Request updates or deletion anytime.</p>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <small>&copy; 2025 AI Home Solutions & JarVonDigital LLC. Licensed and insured HVAC specialists.</small>
+  </div>
 </footer>
