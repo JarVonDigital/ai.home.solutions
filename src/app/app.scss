@@ -1,3 +1,5 @@
+@use 'sass:color';
+
 :host {
   display: block;
   --nav-height: 4rem;
@@ -74,6 +76,29 @@ footer {
 
   .privacy {
     max-width: 28rem;
+
+    .privacy-link {
+      display: inline-block;
+      padding: 0.35rem 0.25rem;
+      margin-top: 0.25rem;
+      color: var(--accent);
+      border: none;
+      background: none;
+      font: inherit;
+      cursor: pointer;
+      text-decoration: underline;
+
+      &:hover {
+        color: color.adjust(#40948b, $lightness: -5%);
+      }
+    }
+
+    .privacy-note {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
   }
 
   .footer-meta {
@@ -89,3 +114,4 @@ footer {
     }
   }
 }
+

@@ -2,7 +2,8 @@ $platinum: #f0f0f0;
 $grey-olive: #909090;
 $charcoal-brown: #42403e;
 $carbon-black: #232323;
-$muted-teal: #7cbba4;
+$muted-teal: rgb(124, 187, 164);
+$muted-teal-50: rgba(124, 187, 164, 0.7);
 
 $gradient-top: linear-gradient(0deg, $platinum, $grey-olive, $charcoal-brown, $carbon-black, $muted-teal);
 $gradient-right: linear-gradient(90deg, $platinum, $grey-olive, $charcoal-brown, $carbon-black, $muted-teal);
@@ -20,6 +21,7 @@ $gradient-radial: radial-gradient($platinum, $grey-olive, $charcoal-brown, $carb
   --color-charcoal-brown: #{$charcoal-brown};
   --color-carbon-black: #{$carbon-black};
   --color-muted-teal: #{$muted-teal};
+  --color-muted-teal-50: #{$muted-teal-50};
 
   --gradient-top: #{$gradient-top};
   --gradient-right: #{$gradient-right};

@@ -30,11 +30,62 @@
     </div>
 
     <div class="footer-col privacy">
-      <h4>Privacy Policy</h4>
-      <p>We collect your contact and service details only to schedule HVAC visits, maintain equipment records, and send confirmations. We do not sell personal data. Limited information may be shared with trusted providers (e.g., EmailJS) solely to send your messages. Request updates or deletion anytime.</p>
+      <h4>Privacy</h4>
+      <p>We use your details only to respond to service requests and keep accurate equipment records. No data sales—ever.</p>
+      <button type="button" class="footer-link privacy-link" (click)="openPrivacyDialog()">View full privacy policy</button>
+      <small class="privacy-note">Last updated: Dec 2025</small>
     </div>
   </div>
   <div class="footer-meta">
     <small>&copy; 2025 AI Home Solutions & JarVonDigital LLC. Licensed and insured HVAC specialists.</small>
   </div>
 </footer>
+
+<p-dialog
+  header="Privacy Policy"
+  [(visible)]="privacyDialogVisible"
+  [modal]="true"
+  [draggable]="false"
+  [blockScroll]="true"
+  [closeOnEscape]="true"
+  (onHide)="closePrivacyDialog()"
+>
+  <div class="privacy-dialog">
+    <p class="intro">AI Home Solutions collects only what we need to respond to your requests, deliver HVAC services, and keep accurate service histories. We do not sell or rent your personal information.</p>
+
+    <h5>What we collect</h5>
+    <ul>
+      <li>Contact details: name, phone number, email, and how you prefer to be reached.</li>
+      <li>Service details: property address, preferred appointment windows, equipment make/model, and a description of the issue.</li>
+      <li>Form data: message content and reCAPTCHA token to prevent spam; optional photos you send for diagnostics.</li>
+    </ul>
+
+    <h5>How we use it</h5>
+    <ul>
+      <li>Respond to inquiries, schedule visits, and send confirmations or follow-ups.</li>
+      <li>Maintain service and equipment records so we can recommend the right parts and upkeep cadence.</li>
+      <li>Protect the site from spam and abuse with Google reCAPTCHA.</li>
+    </ul>
+
+    <h5>Who helps us</h5>
+    <ul>
+      <li>EmailJS processes contact form submissions so messages reach our team inbox.</li>
+      <li>Google reCAPTCHA verifies submissions are from people, not bots.</li>
+      <li>Hosting and backup providers store the site and operational logs with security controls equivalent to ours.</li>
+    </ul>
+
+    <h5>Retention and control</h5>
+    <ul>
+      <li>We keep service records only as long as needed for maintenance history, legal, or accounting requirements.</li>
+      <li>You can request access, correction, or deletion of your information at any time.</li>
+      <li>Reach out to update communication preferences or opt out of follow-ups.</li>
+    </ul>
+
+    <h5>Contact</h5>
+    <p>Email <a href="mailto:ai.homesolutionspro@gmail.com">ai.homesolutionspro@gmail.com</a> or call <a href="tel:+18632741714">(863) 274-1714</a> for any privacy questions or to make a request.</p>
+  </div>
+
+  <ng-template pTemplate="footer">
+    <button type="button" class="dialog-close" (click)="closePrivacyDialog()">Close</button>
+  </ng-template>
+</p-dialog>
