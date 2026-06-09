@@ -1,17 +1,17 @@
 @use 'sass:color';
 @use './palette';
 
-$primary-50: color.mix(#fff, palette.$muted-teal, 12%);
-$primary-100: color.mix(#fff, palette.$muted-teal, 22%);
-$primary-200: color.mix(#fff, palette.$muted-teal, 32%);
-$primary-300: color.mix(#fff, palette.$muted-teal, 45%);
-$primary-400: color.mix(#fff, palette.$muted-teal, 57%);
-$primary-500: palette.$muted-teal;
-$primary-600: color.mix(#000, palette.$muted-teal, 12%);
-$primary-700: color.mix(#000, palette.$muted-teal, 24%);
-$primary-800: color.mix(#000, palette.$muted-teal, 36%);
-$primary-900: color.mix(#000, palette.$muted-teal, 52%);
-$primary-950: color.mix(#000, palette.$muted-teal, 64%);
+$primary-50: color.mix(#fff, palette.$logo-blue, 12%);
+$primary-100: color.mix(#fff, palette.$logo-blue, 22%);
+$primary-200: color.mix(#fff, palette.$logo-blue, 32%);
+$primary-300: color.mix(#fff, palette.$logo-blue, 45%);
+$primary-400: color.mix(#fff, palette.$logo-blue, 57%);
+$primary-500: palette.$logo-blue;
+$primary-600: color.mix(palette.$logo-deep, palette.$logo-blue, 18%);
+$primary-700: color.mix(palette.$logo-deep, palette.$logo-blue, 32%);
+$primary-800: color.mix(palette.$logo-deep, palette.$logo-blue, 48%);
+$primary-900: color.mix(palette.$logo-deep, palette.$logo-blue, 64%);
+$primary-950: color.mix(palette.$logo-deep, palette.$logo-blue, 78%);
 
 $surface-0: #fff;
 $surface-50: color.mix(#fff, palette.$platinum, 65%);
@@ -21,8 +21,8 @@ $surface-300: color.mix(#fff, palette.$platinum, 20%);
 $surface-400: color.mix(palette.$platinum, palette.$carbon-black, 15%);
 $surface-500: palette.$platinum;
 
-$border-color: color.mix(palette.$carbon-black, palette.$platinum, 75%);
-$muted-text: color.mix(palette.$carbon-black, palette.$grey-olive, 40%);
+$border-color: color.mix(palette.$logo-navy, palette.$platinum, 18%);
+$muted-text: color.mix(palette.$logo-steel, palette.$carbon-black, 58%);
 $focus-ring: color.change($primary-500, $alpha: 0.35);
 
 :root {
@@ -40,7 +40,7 @@ $focus-ring: color.change($primary-500, $alpha: 0.35);
   --p-primary-900: #{$primary-900};
   --p-primary-950: #{$primary-950};
   --p-primary-color: var(--p-primary-500);
-  --p-primary-contrast-color: #{palette.$carbon-black};
+  --p-primary-contrast-color: #fff;
 
   --p-surface-0: #{$surface-0};
   --p-surface-50: #{$surface-50};
@@ -50,7 +50,7 @@ $focus-ring: color.change($primary-500, $alpha: 0.35);
   --p-surface-400: #{$surface-400};
   --p-surface-500: #{$surface-500};
 
-  --p-text-color: #{palette.$carbon-black};
+  --p-text-color: #{palette.$logo-deep};
   --p-text-muted-color: #{$muted-text};
   --p-content-border-color: #{$border-color};
   --p-content-background: var(--p-surface-0);
@@ -60,13 +60,13 @@ $focus-ring: color.change($primary-500, $alpha: 0.35);
   --p-overlay-mask-background: #{color.change(palette.$carbon-black, $alpha: 0.48)};
 
   --p-highlight-background: #{color.mix($primary-500, $surface-0, 75%)};
-  --p-highlight-text-color: #{palette.$carbon-black};
+  --p-highlight-text-color: #{palette.$logo-deep};
 
   --p-border-radius: 12px;
   --p-border-radius-sm: 10px;
   --p-border-radius-lg: 14px;
-  --p-shadow-1: 0 10px 40px #{color.change(palette.$carbon-black, $alpha: 0.14)};
-  --p-shadow-2: 0 16px 60px #{color.change(palette.$carbon-black, $alpha: 0.18)};
+  --p-shadow-1: 0 10px 40px #{color.change(palette.$logo-navy, $alpha: 0.14)};
+  --p-shadow-2: 0 16px 60px #{color.change(palette.$logo-navy, $alpha: 0.18)};
 
   --p-font-family: 'Open Sans', 'Nunito', system-ui, -apple-system, sans-serif;
   --p-line-height: 1.4;

@@ -11,7 +11,7 @@ import { Nav } from './components/nav/nav';
   styleUrl: './app.scss'
 })
 export class App {
-  protected title = 'AI.Home.Solutions';
+  protected title = 'AI Air Solutions';
   protected privacyDialogVisible = false;
 
   protected openPrivacyDialog(): void {
